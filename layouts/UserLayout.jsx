@@ -1,7 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
-import Footer from '../components/Footer/Footer';
-import Header from '../components/Header/Header';
 import SideBar from '../components/SideBar/SideBar';
 import customTheme from '../theme/theme';
 import { Container, Content, Main, PageWrapper } from './layoutStyle';
@@ -9,16 +7,17 @@ import { Container, Content, Main, PageWrapper } from './layoutStyle';
 const UserLayout = ({ children }) => {
     const defaultTheme = customTheme('light');
     const { palette } = defaultTheme;
-    console.log(palette);
+    const [isSideBarOpen, setIsSideBarOpen] = useState(true);
     return (
         <ThemeProvider theme={defaultTheme}>
             <PageWrapper bgColor={palette.background}>
-                <Header />
+                {/* <Header setIsSideBarOpen={setIsSideBarOpen} /> */}
                 <Container>
-                    <SideBar />
-                    <Main>
+                    {/* <SideBar open={isSideBarOpen} /> */}
+                    <SideBar open={false} />
+                    <Main open={false}>
                         <Content>{children}</Content>
-                        <Footer />
+                        {/* <Footer /> */}
                     </Main>
                 </Container>
             </PageWrapper>

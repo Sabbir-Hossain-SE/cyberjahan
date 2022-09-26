@@ -38,10 +38,13 @@ export const LogoContainer = styled.div`
 
 export const MenuIcon = styled(FiMenu)`
     cursor: 'pointer';
+    &:hover {
+        color: #0d6efd;
+    }
 `;
 
 export const RightContent = styled.div`
-    gap: 2rem;
+    gap: 3rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -51,7 +54,7 @@ export const AlertContainer = styled.div`
     display: inline-flex;
     flex-direction: row;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
 `;
 
 export const Notifications = styled.div`
@@ -64,17 +67,19 @@ export const NotificationCount = styled.span`
     border: unset;
     border-radius: 4px;
     background-color: red;
-    font-size: 10px;
+    font-size: 1rem;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     top: -2px;
     right: -3px;
+    background-color: ${(props) => props.bgColor};
+    color: #fff;
 `;
 
 export const NotificationIcon = styled(Icon)`
-    font-size: 28px;
+    font-size: 2.8rem;
     display: inline-flex;
     flex-direction: row;
     align-items: center;
@@ -83,14 +88,13 @@ export const NotificationIcon = styled(Icon)`
 
 export const Messages = styled(Notifications)``;
 
-export const MessageCount = styled(NotificationCount)``;
+export const MessageCount = styled(NotificationCount)`
+    background-color: ${(props) => props.bgColor};
+    color: #fff;
+`;
 
 export const MessageIcon = styled(NotificationIcon)``;
 
 export const SearchBarWrapper = styled.div`
     width: 400px;
 `;
-
-// export const RightContent = styled.div``;
-
-// export const RightContent = styled.div``;

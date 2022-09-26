@@ -1,5 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Rashi+Hebrew:wght@300;400;500;600;700&family=Tiro+Bangla:ital@0;1&display=swap');
+
+@font-face {
+    font-family: 'Shonar Bangla Bold';
+    src: url('../public/font/Shonar_Bangla_Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'roman bold';
+    src: url('../public/font/times-new-roman-bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'VremyaFWF Regular';
+    src: url('../public/font/VREMF___.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'VremyaFWF Bold';
+    src: url('../public/font/VREMFB__.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'VremyaFWF Regular Italic';
+    src: url('../public/font/VREMFI__.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'VremyaFWF Regular Italic Bold';
+    src: url('../public/font/VREMFBI_.woff') format('woff');
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -16,4 +48,12 @@ body {
 }
 a {
     text-decoration: none;
+}
+
+.active {
+    -moz-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
 }

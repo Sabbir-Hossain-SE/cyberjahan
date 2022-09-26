@@ -23,13 +23,14 @@ export const DropDownLink = styled.a`
     }
 `;
 
-export const List = styled.ul`
+export const Dialog = styled.ul`
+    border-radius: 4px;
     visibility: hidden;
-    list-style: none;
     opacity: 0;
     position: absolute;
     right: 0;
-    width: 200px;
+    min-width: 280px;
+    min-height: 300px;
     top: 74px;
     background-color: #fff;
     transform: translateY(-2.6rem);
@@ -38,10 +39,9 @@ export const List = styled.ul`
     box-shadow: 0 3px 12px rgb(0 0 0 / 15%);
 `;
 
-export const ListItem = styled.li``;
-
 export const UserName = styled.p`
-    /* display: inline-block; */
+    font-size: 1.6rem;
+    color: ${(props) => props.color};
 `;
 
 export const DownArrowIcon = styled(Icon)``;

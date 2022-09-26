@@ -5,7 +5,6 @@ export const SelectBox = styled.select`
     height: 42px;
     background: transparent;
     border-radius: 4px;
-    border: 1px solid #2196f3;
     outline: none;
     padding: 0 10px 0 10px;
     cursor: pointer;
@@ -13,6 +12,14 @@ export const SelectBox = styled.select`
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none; */
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: #ced4da;
+    outline: none;
+    &:focus {
+        border-color: dodgerBlue;
+        box-shadow: 0 0 5px 0 dodgerBlue;
+    }
 `;
 export const Option = styled.option`
     position: absolute;

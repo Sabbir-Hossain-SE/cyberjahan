@@ -12,9 +12,11 @@ export const InputField = styled.input`
     padding: 0.8rem 1.2rem;
     border-radius: 4px;
     border-width: 1px;
+    border-color: #ced4da;
+    outline: none;
     &:focus {
         outline: none;
         border-color: dodgerBlue;
-        box-shadow: 0 0 8px 0 dodgerBlue;
+        box-shadow: 0 0 5px 0 dodgerBlue;
     }
 `;
