@@ -23,11 +23,14 @@ const UserLayout = ({ children }) => {
 
     const handleSmallDeviceSideBar = (e) => {
         const { className } = e.target;
-        if (className.includes('BackDrop')) {
+        if (
+            className &&
+            typeof className.includes == 'function' &&
+            className.includes('BackDrop')
+        ) {
             setIsSideBarOpen(false);
         }
     };
-    console.log(isSideBarOpen);
     return (
         <ThemeProvider theme={defaultTheme}>
             <PageWrapper bgColor={palette.background}>
