@@ -13,7 +13,7 @@ export const CardContainer = styled.div`
 
 export const CardBadge = styled.div`
     position: absolute;
-    height: 2.4rem;
+    height: 3.2rem;
     padding: 1rem;
     display: inline-flex;
     justify-content: center;
@@ -24,6 +24,6 @@ export const CardBadge = styled.div`
     top: -2px;
     color: ${(props) => props.color};
     font-family: 'Shonar Bangla Bold';
-    font-size: 1.4rem;
-    line-height: 2rem;
+    font-size: 2.2rem;
+    /* line-height: 2rem; */
 `;

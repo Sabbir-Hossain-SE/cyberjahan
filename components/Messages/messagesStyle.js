@@ -1,12 +1,22 @@
 import styled from 'styled-components';
+import breakPoints from '../../theme/breakPoints';
 import { Dialog } from '../AccountInfo/accountInfoStyle';
 import { List, ListIcon, ListItem, ListText } from '../SideBar/sideBarStyle';
+
+const device = breakPoints();
 
 export const MgDialog = styled(Dialog)`
     right: 0;
     min-width: 490px;
     min-height: 300px;
     top: 59px;
+    @media ${device.tablet} {
+        right: -90px;
+    }
+    @media ${device.mobileL} {
+        min-width: unset;
+        width: 350px;
+    }
 `;
 
 export const DetailsContainer = styled.div`
@@ -67,6 +77,9 @@ export const MgListItem = styled(ListItem)`
     cursor: pointer;
     gap: 1rem;
     color: ${(props) => props.color};
+    &:hover {
+        background-color: #f6f9ff;
+    }
 `;
 
 export const LeftItemWrapper = styled.div``;

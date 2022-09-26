@@ -5,11 +5,12 @@ export const SideBarWrapper = styled.aside`
 `;
 
 export const SideBarContainer = styled.div`
-    height: 100vh;
+    min-height: 100vh;
     width: 300px;
     position: fixed;
     left: 0;
-    top: 86px;
+    z-index: 10;
+    top: ${(props) => (props.tabView ? 0 : '86px')};
     background-color: #fff;
     box-shadow: 5px 0 5px -5px rgb(58 56 81 / 10%);
     padding: 1.8rem;
@@ -77,4 +78,13 @@ export const ListIcon = styled.i`
 
 export const ListText = styled.span`
     color: ${(props) => props.color} !important;
+`;
+
+export const BackDrop = styled.div`
+    position: fixed;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 9999999;
+    margin-top: -86px;
 `;

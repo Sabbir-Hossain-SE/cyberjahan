@@ -16,7 +16,7 @@ import {
     SideBarWrapper
 } from './sideBarStyle';
 
-const SideBar = ({ type = 'persistent', open = true }) => {
+const SideBar = ({ type = 'persistent', open = true, tabView = false }) => {
     const { palette } = useTheme();
     const [menu, setMenu] = useState(menuList);
 
@@ -48,7 +48,7 @@ const SideBar = ({ type = 'persistent', open = true }) => {
     };
     return (
         <SideBarWrapper open={open} type={(type, open)}>
-            <SideBarContainer type={(type, open)}>
+            <SideBarContainer type={(type, open)} tabView={tabView}>
                 <List className="sidebar-menu">
                     {menu.map((item, menuIndex) => (
                         <ListItem
@@ -57,7 +57,7 @@ const SideBar = ({ type = 'persistent', open = true }) => {
                             color={palette.primary}
                             isActive={item.isActive}
                         >
-                            <Link href="/form">
+                            <Link href="/">
                                 <ListNavigator
                                     onClick={() => handleMenuToggle(menuIndex, item.isActive)}
                                     bgColor={item.isActive ? palette.background : 'transparent'}

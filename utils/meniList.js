@@ -1,13 +1,13 @@
 const menuList = [
     {
         label: 'Dashboard',
-        isActive: true,
+        isActive: false,
         icon: '',
         link: ''
     },
     {
         label: 'Forms',
-        isActive: false,
+        isActive: true,
         icon: '',
         link: '',
         subMenuList: [
@@ -41,7 +41,7 @@ const menuList = [
     },
     {
         label: 'Profile',
-        isActive: true,
+        isActive: false,
         icon: '',
         link: ''
     }

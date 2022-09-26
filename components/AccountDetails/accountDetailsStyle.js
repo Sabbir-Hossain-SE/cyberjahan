@@ -34,6 +34,9 @@ export const AdListItem = styled(ListItem)`
     cursor: pointer;
     gap: 1rem;
     color: ${(props) => props.color};
+    &:hover {
+        background-color: #f6f9ff;
+    }
 `;
 
 export const AdListIcon = styled(ListIcon)``;

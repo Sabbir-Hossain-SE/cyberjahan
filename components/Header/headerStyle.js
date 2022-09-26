@@ -25,15 +25,13 @@ export const HeaderContainer = styled.div`
 
 export const LeftContent = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: ${(props) => (props.isSmallDevice ? 'row-reverse' : 'row')};
+    gap: 1rem;
     align-items: center;
-    @media ${devices.laptop} {
-        flex-direction: row;
-    }
 `;
 
 export const LogoContainer = styled.div`
-    width: 282px;
+    width: ${(props) => (props.isSmallDevice ? '60px' : '282px')};
 `;
 
 export const MenuIcon = styled(FiMenu)`

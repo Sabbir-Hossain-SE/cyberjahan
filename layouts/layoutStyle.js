@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+import breakPoints from '../theme/breakPoints';
+
+const device = breakPoints();
 
 export const PageWrapper = styled.div`
     background-color: ${(props) => props.bgColor};
@@ -12,6 +15,9 @@ export const Container = styled.div`
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    @media ${device.laptop} {
+        display: unset;
+    }
 `;
 
 export const Main = styled.div`
