@@ -1,19 +1,19 @@
 const menuList = [
     {
         label: 'Dashboard',
-        isActive: false,
+        isActive: true,
         icon: '',
         link: ''
     },
     {
         label: 'Forms',
-        isActive: true,
+        isActive: false,
         icon: '',
         link: '',
         subMenuList: [
             {
                 label: 'Layout 1',
-                isActive: true,
+                isActive: false,
                 icon: '',
                 link: ''
             },
